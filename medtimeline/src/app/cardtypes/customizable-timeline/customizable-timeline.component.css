@@ -1,0 +1,71 @@
+::ng-deep [class*="timeline"] .c3-xgrid-focus {
+  visibility: visible !important;
+}
+
+::ng-deep .timeline .c3 {
+  cursor: pointer !important;
+}
+
+::ng-deep [class*="tooltip-custom"] {
+  position: absolute;
+  display: block;
+  font-size: 11px;
+  border-style: solid;
+  padding: 3px;
+  border-width: 1px;
+  border-color: grey;
+  border-radius: 3px;
+  min-height: 25px;
+  width: 160px;
+  max-height: 100px;
+  background-color: white;
+  overflow: auto;
+  color: white;
+}
+
+
+::ng-deep [class*="tooltip-whole"] {
+  position: absolute;
+  display: block;
+  min-height: 25px;
+  width: 0px;
+  max-height: 100px;
+  border-left-style: solid;
+  border-width: 1px;
+}
+
+
+::ng-deep [class*="tooltip-title-custom"] {
+  margin: 0px;
+  font-size: small;
+  text-align: center;
+  max-width: 120px;
+  display: inline-block;
+  vertical-align: bottom;
+  min-width: 120px;
+  overflow: auto;
+  margin-top: 5px;
+  overflow-wrap: break-word;
+}
+
+::ng-deep [class*="tooltip-details-custom"] {
+  display: none;
+  overflow: auto;
+  text-align: center;
+  overflow-wrap: break-word;
+  max-width: 120px;
+}
+
+::ng-deep [id*="expand"] {
+  visibility: hidden;
+  vertical-align: middle;
+}
+
+::ng-deep [id*="delete"] {
+  visibility: hidden;
+  vertical-align: middle;
+}
+::ng-deep [id*="edit"] {
+  visibility: hidden;
+  margin-top: 8px;
+}

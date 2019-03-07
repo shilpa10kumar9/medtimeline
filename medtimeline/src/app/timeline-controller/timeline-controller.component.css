@@ -1,0 +1,27 @@
+.datePicker {
+  background-color: white;
+  padding-top: 20px;
+}
+
+.mat-form-field {
+  width: 40%;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+::ng-deep .mat-h2 {
+  margin-bottom: 0px !important;
+}
+
+/* Remove extra padding below the button. */
+::ng-deep .mat-mini-fab .mat-button-wrapper {
+  padding: 0px !important;
+}
+
+::ng-deep .mat-h2 {
+  margin-bottom: 0px !important;
+}
+
+::ng-deep td.available{
+  color: black;
+}

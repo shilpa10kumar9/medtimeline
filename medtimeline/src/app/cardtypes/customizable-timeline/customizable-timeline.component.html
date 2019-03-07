@@ -1,0 +1,10 @@
+<app-card [attr.id]="id" label="Custom Timeline" [isDraggable]="false" [isEditable]="true" [isRemovable]="false" color="white"
+  (onRender)="this.renderContainedGraph()">
+  <ng-container class="legends-block">
+    Click on this graph to add a flag for anything you want to keep track of.
+  </ng-container>
+  <div fxFlex="row" class="contents-block">
+    <app-customizable-graph class="timeline" [data]="this.data" [dateRange]="this.dateRange" (pointsChanged)="pointsChanged($event)">
+    </app-customizable-graph>
+  </div>
+</app-card>
