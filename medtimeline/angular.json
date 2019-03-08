@@ -70,14 +70,6 @@
                   "with": "src/environments/environment.http.ts"
                 }
               ]
-            },
-            "dev_http_debugger": {
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.http.debugger.ts"
-                }
-              ]
             }
           }
         },
@@ -98,9 +90,6 @@
             },
             "dev_http": {
               "browserTarget": "medtimeline:build:dev_http"
-            },
-            "dev_http_debugger": {
-              "browserTarget": "medtimeline:build:dev_http_debugger"
             }
           }
         },

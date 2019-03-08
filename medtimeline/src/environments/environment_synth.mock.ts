@@ -10,8 +10,7 @@ export const environment = {
     'test_bmedtimeA_encounters', 'test_bmedtimeA_med_order',
     'test_bmedtimeA_med_st', 'test_bmedtimeA_obs_labs',
     'test_bmedtimeA_obs_vitals'
-  ],
-  useDebugger: false,
+  ]
 };
 
 /*

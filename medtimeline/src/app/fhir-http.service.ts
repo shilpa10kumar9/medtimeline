@@ -7,13 +7,12 @@ import {Inject, Injectable, SecurityContext} from '@angular/core';
 import {DomSanitizer} from '@angular/platform-browser';
 import {Interval} from 'luxon';
 
-import {APP_TIMESPAN, FhirResourceType} from '../constants';
+import {FhirResourceType} from '../constants';
 
 import {BCHMicrobioCodeGroup} from './clinicalconcepts/bch-microbio-code';
 import {LOINCCode} from './clinicalconcepts/loinc-code';
 import {documentReferenceLoinc} from './clinicalconcepts/resource-code-manager';
 import {RxNormCode} from './clinicalconcepts/rx-norm';
-import {DebuggerService} from './debugger.service';
 import {DiagnosticReport} from './fhir-data-classes/diagnostic-report';
 import {Encounter} from './fhir-data-classes/encounter';
 import {MedicationAdministration} from './fhir-data-classes/medication-administration';
@@ -38,7 +37,6 @@ export class FhirHttpService extends FhirService {
   private createContentTypeString = 'application/xhtml+xml;charset=utf-8';
 
   constructor(
-      private debugService: DebuggerService,
       @Inject(SMART_ON_FHIR_CLIENT) smartOnFhirClient: any,
       private sanitizer: DomSanitizer) {
     super();
@@ -91,7 +89,6 @@ export class FhirHttpService extends FhirService {
                     // Do not return any Observations for this code if one of
                     // the Observation constructions throws an error.
                     rejection => {
-                      this.debugService.logError(rejection);
                       throw rejection;
                     }));
   }
@@ -129,18 +126,12 @@ export class FhirHttpService extends FhirService {
         smartApi => smartApi.patient.api.fetchAll(queryParams)
                         .then(
                             (results: any[]) => results.map(result => {
-                              try {
-                                return new MedicationAdministration(result);
-                              } catch (e) {
-                                this.debugService.logError(e);
-                                throw e;
-                              }
+                              return new MedicationAdministration(result);
                             }),
                             // Do not return any MedicationAdministrations for
                             // this code if one of the MedicationAdministration
                             // constructions throws an error.
                             rejection => {
-                              this.debugService.logError(rejection);
                               throw rejection;
                             }));
   }
@@ -162,7 +153,6 @@ export class FhirHttpService extends FhirService {
                     // this code if one of the MedicationOrder
                     // constructions throws an error.
                     rejection => {
-                      this.debugService.logError(rejection);
                       throw rejection;
                     }));
   }
@@ -193,7 +183,6 @@ export class FhirHttpService extends FhirService {
                             // this code if one of the MedicationOrder
                             // constructions throws an error.
                             rejection => {
-                              this.debugService.logError(rejection);
                               throw rejection;
                             }));
   }
@@ -209,31 +198,21 @@ export class FhirHttpService extends FhirService {
       type: FhirResourceType.Encounter,
     };
 
-    if (!dateRange) {
-      dateRange = APP_TIMESPAN;
-    }
     // The Cerner implementation of the Encounter search does not offer any
     // filtering by date at this point, so we grab all the encounters
     // then filter them.
 
     return this.smartApiPromise.then(
         smartApi => smartApi.patient.api.fetchAll(queryParams)
-                        .then(
-                            (results: any[]) => {
-                              results =
-                                  results
-                                      .map(result => {
-                                        return new Encounter(result);
-                                      })
-                                      .filter(
-                                          encounter =>
-                                              dateRange.intersection(
-                                                  encounter.period) !== null);
-                              return results;
-                            },
-                            rejection => {
-                              this.debugService.logError(rejection);
-                            }));
+                        .then((results: any[]) => {
+                          results
+                              .map(result => {
+                                return new Encounter(result);
+                              })
+                              .filter(
+                                  encounter => dateRange.intersection(
+                                                   encounter.period) !== null);
+                        }));
   }
 
   /**

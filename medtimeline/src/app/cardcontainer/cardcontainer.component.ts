@@ -10,7 +10,6 @@ import {DragulaService} from 'ng2-dragula';
 import {Subscription} from 'rxjs';
 import {v4 as uuid} from 'uuid';
 
-import {environment} from '../../environments/environment';
 import {CardComponent} from '../cardtypes/card/card.component';
 import {ResourceCodeManager, ResourceCodesForCard} from '../clinicalconcepts/resource-code-manager';
 import {DeleteDialogComponent} from '../delete-dialog/delete-dialog.component';
@@ -26,9 +25,6 @@ import {ChartType} from '../graphtypes/graph/graph.component';
 export class CardcontainerComponent {
   // How long to display the snack bar for.
   private readonly DISPLAY_TIME = 6000;
-
-  // Whether or not to display the debugger.
-  private useDebugger = environment.useDebugger;
 
   @ViewChildren(CardComponent) containedCards!: QueryList<CardComponent>;
 
