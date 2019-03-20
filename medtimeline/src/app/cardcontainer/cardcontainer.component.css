@@ -1,6 +1,7 @@
 .cardContainer {
   background-color: #002356; /* PRIMARY_COLOR */
   display: flex;
+  display: -ms-flexbox;
   padding: 15px;
   width: 100%;
   min-height: 100%;
