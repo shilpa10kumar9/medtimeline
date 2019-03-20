@@ -11,7 +11,7 @@
   <app-data-selector-menu (addCard)="addConceptCard($event)" (addTextbox)="addTextbox()"
     (addCustomTimeline)="addCustomTimeline()"></app-data-selector-menu>
   <div fxLayout="column" dragula="graphcards" class="draggable">
-    hi!!!
+    hi!!!!!!!
     <div *ngFor="let element of displayedConcepts" [attr.data-index]="element['id']" class="displayedConcept">
       <app-textboxcard *ngIf="element['concept'] ==='textbox'" [id]="element['id']" [noteString]="element['value']"
         (removeEvent)="removeDisplayedCard($event)"></app-textboxcard>
