@@ -44,3 +44,8 @@
 body {
   margin: 0px;
 }
+
+::ng-deep .mat-toolbar {
+  display: flex;
+  display: -ms-flexbox;
+}
