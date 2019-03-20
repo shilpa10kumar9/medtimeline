@@ -13,8 +13,16 @@
           user-select: none; /* Chrome and Opera */
 }
 
+
+::ng-deep .mat-toolbar-row, .mat-toolbar-single-row {
+  display: flex;
+  display: -ms-flexbox;
+}
+
 .mat-toolbar {
   background-color: #00002d; /* PRIMARY_COLOR, dark variant */
+  display: flex;
+  display: -ms-flexbox;
 }
 
 ::ng-deep .gu-unselectable app-data-selector-menu {
