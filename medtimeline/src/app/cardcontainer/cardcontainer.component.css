@@ -14,15 +14,12 @@
 }
 
 
-::ng-deep .mat-toolbar-row, .mat-toolbar-single-row {
-  display: flex;
+::ng-deep .mat-toolbar, .mat-toolbar h1, .mat-toolbar h2, .mat-toolbar h3, .mat-toolbar h4, .mat-toolbar h5, .mat-toolbar h6, .mat-toolbar-row, .mat-toolbar-single-row {
   display: -ms-flexbox;
 }
 
 .mat-toolbar {
   background-color: #00002d; /* PRIMARY_COLOR, dark variant */
-  display: flex;
-  display: -ms-flexbox;
 }
 
 ::ng-deep .gu-unselectable app-data-selector-menu {
