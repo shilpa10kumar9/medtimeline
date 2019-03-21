@@ -60,3 +60,10 @@
   margin-right: 15px;
   display: -ms-flexbox;
 }
+
+::ng-deep app-card {
+  flex-direction: row;
+  -ms-flex-direction: row;
+  display: flex;
+  display: -ms-flexbox;
+}
