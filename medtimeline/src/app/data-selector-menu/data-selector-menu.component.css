@@ -6,8 +6,8 @@
   -ms-flex-direction: row;
   align-content: center;
   -ms-flex-line-pack: center;
-  justify-content: center;
-  -ms-flex-pack: center;
+  justify-content: flex-start;
+  -ms-flex-pack: start;
   align-items: center;
   -ms-flex-align: center;
   flex: 1 1 0%;
