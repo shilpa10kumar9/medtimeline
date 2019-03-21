@@ -37,6 +37,12 @@
   display: -ms-flexbox;
   flex: 0 0 0%;
   -ms-flex: 0 0 0%;
+  align-content: center;
+  -ms-flex-line-pack: center; /* Align content: center conversion for IE10*/
+  justify-content: center;
+  -ms-flex-pack: center;  /* Justify content: center conversion for IE10*/
+  align-self: stretch;
+  -ms-flex-item-align: stretch;  /* Align self: stretch conversion for IE10*/
 }
 
 .mat-icon {
