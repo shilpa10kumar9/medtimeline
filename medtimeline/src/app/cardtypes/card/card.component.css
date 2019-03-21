@@ -36,7 +36,7 @@
   display: flex;
   display: -ms-flexbox;
   flex: 0 0 0%;
-  -ms-flex: 0 0 0%;
+  -ms-flex: 0 0 auto;
 }
 
 .mat-icon {
