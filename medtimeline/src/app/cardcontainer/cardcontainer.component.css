@@ -13,6 +13,14 @@
           user-select: none; /* Chrome and Opera */
 }
 
+.flexSpacer {
+  flex: 1 1 0%;
+  -ms-flex: 1 1 0%;
+}
+
+::ng-deep .mat-toolbar, .mat-toolbar h1, .mat-toolbar h2, .mat-toolbar h3, .mat-toolbar h4, .mat-toolbar h5, .mat-toolbar h6, .mat-toolbar-row, .mat-toolbar-single-row {
+  display: -ms-flexbox; /* For IE10 */
+}
 
 ::ng-deep .mat-toolbar, .mat-toolbar h1, .mat-toolbar h2, .mat-toolbar h3, .mat-toolbar h4, .mat-toolbar h5, .mat-toolbar h6, .mat-toolbar-row, .mat-toolbar-single-row {
   display: -ms-flexbox;
