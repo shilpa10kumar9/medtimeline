@@ -67,3 +67,10 @@
   display: flex;
   display: -ms-flexbox;
 }
+
+::ng-deep app-data-selector-menu {
+  flex-direction: row;
+  -ms-flex-direction: row;
+  display: flex;
+  display: -ms-flexbox;
+}
