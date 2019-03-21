@@ -611,7 +611,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".cardContainer {\n  background-color: #002356; /* PRIMARY_COLOR */\n  display: -webkit-box;\n  display: flex;\n  display: -ms-flexbox;\n  padding: 15px;\n  width: 100%;\n  min-height: 100%;\n  /* Disable selecting/highlighting on the page. */\n  -webkit-touch-callout: none; /* iOS Safari */\n  -webkit-user-select: none; /* Safari */\n     -moz-user-select: none; /* Firefox */\n      -ms-user-select: none; /* Internet Explorer/Edge */\n          user-select: none; /* Chrome and Opera */\n}\n\n.flexSpacer {\n  -webkit-box-flex: 1;\n          flex: 1 1 0%;\n  -ms-flex: 1 1 0%;\n}\n\n::ng-deep .mat-toolbar, .mat-toolbar h1, .mat-toolbar h2, .mat-toolbar h3, .mat-toolbar h4, .mat-toolbar h5, .mat-toolbar h6, .mat-toolbar-row, .mat-toolbar-single-row {\n  display: -ms-flexbox; /* For IE10 */\n}\n\n::ng-deep .mat-toolbar, .mat-toolbar h1, .mat-toolbar h2, .mat-toolbar h3, .mat-toolbar h4, .mat-toolbar h5, .mat-toolbar h6, .mat-toolbar-row, .mat-toolbar-single-row {\n  display: -ms-flexbox;\n}\n\n.mat-toolbar {\n  background-color: #00002d; /* PRIMARY_COLOR, dark variant */\n}\n\n::ng-deep .gu-unselectable app-data-selector-menu {\n  /* Hide the data selector menus while a card is being dragged. */\n  opacity: 0 !important;\n}\n\n.makeGutters {\n  padding-right: 100px;\n  padding-left: 100px;\n}\n\n::ng-deep .mat-toolbar-single-row {\n  white-space: unset !important;\n}\n"
+module.exports = ".cardContainer {\n  background-color: #002356; /* PRIMARY_COLOR */\n  display: -webkit-box;\n  display: flex;\n  display: -ms-flexbox;\n  padding: 15px;\n  width: 100%;\n  min-height: 100%;\n  /* Disable selecting/highlighting on the page. */\n  -webkit-touch-callout: none; /* iOS Safari */\n  -webkit-user-select: none; /* Safari */\n     -moz-user-select: none; /* Firefox */\n      -ms-user-select: none; /* Internet Explorer/Edge */\n          user-select: none; /* Chrome and Opera */\n}\n\n.flexSpacer {\n  -webkit-box-flex: 1;\n          flex: 1 1 0%;\n  -ms-flex: 1 1 0%;\n}\n\n::ng-deep .mat-toolbar, .mat-toolbar h1, .mat-toolbar h2, .mat-toolbar h3, .mat-toolbar h4, .mat-toolbar h5, .mat-toolbar h6, .mat-toolbar-row, .mat-toolbar-single-row {\n  display: -ms-flexbox; /* For IE10 */\n}\n\n::ng-deep .mat-toolbar, .mat-toolbar h1, .mat-toolbar h2, .mat-toolbar h3, .mat-toolbar h4, .mat-toolbar h5, .mat-toolbar h6, .mat-toolbar-row, .mat-toolbar-single-row {\n  display: -ms-flexbox;\n}\n\n.mat-toolbar {\n  background-color: #00002d; /* PRIMARY_COLOR, dark variant */\n}\n\n::ng-deep .gu-unselectable app-data-selector-menu {\n  /* Hide the data selector menus while a card is being dragged. */\n  opacity: 0 !important;\n}\n\n.makeGutters {\n  padding-right: 100px;\n  padding-left: 100px;\n}\n\n::ng-deep .mat-toolbar-single-row {\n  white-space: unset !important;\n}\n\n::ng-deep .timelineToolbarMain {\n  float: right;\n  margin-right: 15px;\n  display: -ms-flexbox;\n}\n"
 
 /***/ }),
 
@@ -9421,7 +9421,7 @@ var TimelineControllerComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div style=\"float: right; margin-right: 15px; display: -ms-flexbox;\" fxLayout=\"row\">\n  <div *ngIf=\"showMockDataMessage\">This is synthesized data used for demo purposes only.</div>\n  <button mat-icon-button matTooltip=\"Launch Tutorial\">\n    <mat-icon class=\"toolbarButton\" (click)=\"openHelpDialog()\">help_outline</mat-icon>\n  </button>\n  <button mat-icon-button matTooltip=\"Save a static image of this page to a PowerChart clinical note\">\n    <mat-icon class=\"toolbarButton\" (click)=\"snapshot()\">\n      save\n    </mat-icon>\n  </button>\n</div>"
+module.exports = "<div class=\"timelineToolbarMain\" fxLayout=\"row\">\n  <div *ngIf=\"showMockDataMessage\">This is synthesized data used for demo purposes only.</div>\n  <button mat-icon-button matTooltip=\"Launch Tutorial\">\n    <mat-icon class=\"toolbarButton\" (click)=\"openHelpDialog()\">help_outline</mat-icon>\n  </button>\n  <button mat-icon-button matTooltip=\"Save a static image of this page to a PowerChart clinical note\">\n    <mat-icon class=\"toolbarButton\" (click)=\"snapshot()\">\n      save\n    </mat-icon>\n  </button>\n</div>"
 
 /***/ }),
 
@@ -9491,6 +9491,7 @@ var TimelineToolbarComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-timeline-toolbar',
             template: __webpack_require__(/*! ./timeline-toolbar.component.html */ "./src/app/timeline-toolbar/timeline-toolbar.component.html"),
+            styles: [__webpack_require__(/*! ../cardcontainer/cardcontainer.component.css */ "./src/app/cardcontainer/cardcontainer.component.css")]
         }),
         __metadata("design:paramtypes", [_clinicalconcepts_resource_code_manager__WEBPACK_IMPORTED_MODULE_3__["ResourceCodeManager"], _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialog"]])
     ], TimelineToolbarComponent);
