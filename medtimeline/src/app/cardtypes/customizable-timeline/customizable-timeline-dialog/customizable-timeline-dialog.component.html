@@ -13,7 +13,7 @@
       <mat-datepicker #datePicker></mat-datepicker>
     </mat-form-field>
     <mat-form-field>
-      <input type="time" matInput [formControl]="timeFormControl" placeholder="Time" [matAutocomplete]="auto" required>
+      <input matInput [formControl]="timeFormControl" placeholder="Time" [matAutocomplete]="auto" required>
       <mat-autocomplete #auto="matAutocomplete">
         <mat-option *ngFor="let time of listOfTimes" [value]="time[24]">
           {{time[12]}}
