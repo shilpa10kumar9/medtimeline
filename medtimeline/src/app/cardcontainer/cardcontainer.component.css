@@ -43,3 +43,9 @@
 ::ng-deep .mat-toolbar-single-row {
   white-space: unset !important;
 }
+
+::ng-deep .timelineToolbarMain {
+  float: right;
+  margin-right: 15px;
+  display: -ms-flexbox;
+}
