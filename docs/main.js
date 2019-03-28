@@ -6931,6 +6931,8 @@ var CustomizableGraphComponent = /** @class */ (function (_super) {
         });
         this.dialogRef.afterClosed().subscribe(function (r) {
             if (r) {
+                console.log('hi');
+                console.log(r);
                 if (editedAnnotation) {
                     _this.data.removePointFromSeries(luxon__WEBPACK_IMPORTED_MODULE_4__["DateTime"].fromMillis(editedAnnotation.timestamp.toMillis()));
                     _this.removeAnnotation(editedAnnotation.timestamp.toMillis());
