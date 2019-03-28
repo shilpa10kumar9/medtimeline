@@ -714,6 +714,7 @@ var CardcontainerComponent = /** @class */ (function () {
             .reduce(function (acc, val) { return acc.concat(val); }, []);
         this.setUpCards();
         this.setUpDrag(dragulaService);
+        console.log(String.prototype.padStart);
         // https://github.com/uxitten/polyfill/blob/master/string.polyfill.js
         // https://developer.mozilla.org/en-US/docs/Web/JavaScript/
         //    Reference/Global_Objects/String/padStart
@@ -735,6 +736,7 @@ var CardcontainerComponent = /** @class */ (function () {
                 }
             };
         }
+        console.log(String.prototype.padStart);
     }
     CardcontainerComponent.prototype.setUpCards = function () {
         // Add a textbox at the top of the card list.
