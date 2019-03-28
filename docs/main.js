@@ -1268,9 +1268,10 @@ var CustomizableTimelineDialogComponent = /** @class */ (function () {
     };
     // Constructs a new Date based on user input.
     CustomizableTimelineDialogComponent.prototype.getSelectedDate = function () {
-        var dateString = new Date(this.dateFormControl.value).toLocaleDateString();
-        console.log(luxon__WEBPACK_IMPORTED_MODULE_4__["DateTime"].fromISO(dateString + ' ' + this.timeFormControl));
-        console.log(luxon__WEBPACK_IMPORTED_MODULE_4__["DateTime"].fromJSDate(this.dateFormControl.value));
+        var dateTime = luxon__WEBPACK_IMPORTED_MODULE_4__["DateTime"].fromJSDate(this.dateFormControl.value);
+        var time = this.timeFormControl.value.split(':');
+        dateTime.set({ hour: time[0], minute: time[1] });
+        console.log(dateTime);
         return new Date(this.dateFormControl.value);
     };
     // Finds incomplete fields that are required and disables saving.
