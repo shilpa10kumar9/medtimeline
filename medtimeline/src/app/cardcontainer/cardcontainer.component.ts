@@ -90,6 +90,7 @@ export class CardcontainerComponent {
                                 .reduce((acc, val) => acc.concat(val), []);
     this.setUpCards();
     this.setUpDrag(dragulaService);
+    console.log(String.prototype.padStart);
     // https://github.com/uxitten/polyfill/blob/master/string.polyfill.js
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/
     //    Reference/Global_Objects/String/padStart
@@ -111,6 +112,8 @@ export class CardcontainerComponent {
         }
       };
     }
+
+    console.log(String.prototype.padStart);
   }
 
   private setUpCards() {
