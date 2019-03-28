@@ -218,6 +218,8 @@ export class CustomizableGraphComponent extends
     });
     this.dialogRef.afterClosed().subscribe(r => {
       if (r) {
+        console.log('hi');
+        console.log(r);
         if (editedAnnotation) {
           this.data.removePointFromSeries(
               DateTime.fromMillis(editedAnnotation.timestamp.toMillis()));
