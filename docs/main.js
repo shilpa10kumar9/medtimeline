@@ -1268,8 +1268,13 @@ var CustomizableTimelineDialogComponent = /** @class */ (function () {
     };
     // Constructs a new Date based on user input.
     CustomizableTimelineDialogComponent.prototype.getSelectedDate = function () {
+        console.log('hello');
+        console.log(this.dateFormControl.value);
+        console.log(this.timeFormControl.value);
         var dateString = new Date(this.dateFormControl.value).toLocaleDateString();
-        var date = new Date(dateString + ' ' + this.timeFormControl.value);
+        var entireString = dateString + ' ' + this.timeFormControl.value;
+        console.log(entireString);
+        var date = new Date(entireString);
         return date;
     };
     // Finds incomplete fields that are required and disables saving.
