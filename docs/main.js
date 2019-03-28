@@ -1270,12 +1270,11 @@ var CustomizableTimelineDialogComponent = /** @class */ (function () {
     CustomizableTimelineDialogComponent.prototype.getSelectedDate = function () {
         console.log('hello');
         console.log(this.dateFormControl.value);
-        console.log(this.timeFormControl.value);
         var dateString = new Date(this.dateFormControl.value).toLocaleDateString();
         var entireString = dateString + ' ' + this.timeFormControl.value;
-        console.log(entireString);
+        console.log(luxon__WEBPACK_IMPORTED_MODULE_4__["DateTime"].fromHTTP(this.dateFormControl.value));
         var date = new Date(entireString);
-        return date;
+        return new Date(this.dateFormControl.value);
     };
     // Finds incomplete fields that are required and disables saving.
     CustomizableTimelineDialogComponent.prototype.findIncompleteFields = function () {
