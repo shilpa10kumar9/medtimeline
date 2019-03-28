@@ -123,13 +123,10 @@ export class CustomizableTimelineDialogComponent {
 
   // Constructs a new Date based on user input.
   private getSelectedDate(): Date {
-    console.log('hello');
-    console.log(this.dateFormControl.value);
     const dateString =
         new Date(this.dateFormControl.value).toLocaleDateString();
-    const entireString = dateString + ' ' + this.timeFormControl.value;
-    console.log(DateTime.fromHTTP(this.dateFormControl.value));
-    const date = new Date(entireString);
+    console.log(DateTime.fromISO(dateString + ' ' + this.timeFormControl));
+    console.log(DateTime.fromJSDate(this.dateFormControl.value));
     return new Date(this.dateFormControl.value);
   }
 
