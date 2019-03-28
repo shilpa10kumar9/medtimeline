@@ -125,13 +125,12 @@ export class CustomizableTimelineDialogComponent {
   private getSelectedDate(): Date {
     console.log('hello');
     console.log(this.dateFormControl.value);
-    console.log(this.timeFormControl.value);
     const dateString =
         new Date(this.dateFormControl.value).toLocaleDateString();
     const entireString = dateString + ' ' + this.timeFormControl.value;
-    console.log(entireString);
+    console.log(DateTime.fromHTTP(this.dateFormControl.value));
     const date = new Date(entireString);
-    return date;
+    return new Date(this.dateFormControl.value);
   }
 
   // Finds incomplete fields that are required and disables saving.
