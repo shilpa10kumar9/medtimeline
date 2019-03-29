@@ -123,11 +123,11 @@ export class CustomizableTimelineDialogComponent {
 
   // Constructs a new Date based on user input.
   private getSelectedDate(): Date {
-    let dateTime = DateTime.fromJSDate(this.dateFormControl.value);
+    const dateTime = new Date(this.dateFormControl.value);
     const time = this.timeFormControl.value.split(':');
-    dateTime = dateTime.set({hour: time[0], minute: time[1]});
+    dateTime.setHours(time[0], time[1]);
     console.log(dateTime);
-    return dateTime.toJSDate();
+    return dateTime;
   }
 
   // Finds incomplete fields that are required and disables saving.
