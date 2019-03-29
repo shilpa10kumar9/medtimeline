@@ -125,7 +125,7 @@ export class CustomizableTimelineDialogComponent {
   private getSelectedDate(): Date {
     const dateTime = new Date(this.dateFormControl.value);
     const time = this.timeFormControl.value.split(':');
-    dateTime.setHours(time[0], time[1]);
+    dateTime.setHours(Number(time[0]), Number(time[1]));
     console.log(dateTime);
     return dateTime;
   }
