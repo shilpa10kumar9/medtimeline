@@ -1268,11 +1268,11 @@ var CustomizableTimelineDialogComponent = /** @class */ (function () {
     };
     // Constructs a new Date based on user input.
     CustomizableTimelineDialogComponent.prototype.getSelectedDate = function () {
-        var dateTime = luxon__WEBPACK_IMPORTED_MODULE_4__["DateTime"].fromJSDate(this.dateFormControl.value);
+        var dateTime = new Date(this.dateFormControl.value);
         var time = this.timeFormControl.value.split(':');
-        dateTime = dateTime.set({ hour: time[0], minute: time[1] });
+        dateTime.setHours(time[0], time[1]);
         console.log(dateTime);
-        return dateTime.toJSDate();
+        return dateTime;
     };
     // Finds incomplete fields that are required and disables saving.
     CustomizableTimelineDialogComponent.prototype.findIncompleteFields = function () {
