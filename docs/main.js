@@ -1270,7 +1270,7 @@ var CustomizableTimelineDialogComponent = /** @class */ (function () {
     CustomizableTimelineDialogComponent.prototype.getSelectedDate = function () {
         var dateTime = new Date(this.dateFormControl.value);
         var time = this.timeFormControl.value.split(':');
-        dateTime.setHours(time[0], time[1]);
+        dateTime.setHours(Number(time[0]), Number(time[1]));
         console.log(dateTime);
         return dateTime;
     };
