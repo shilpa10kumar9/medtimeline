@@ -1269,9 +1269,10 @@ var CustomizableTimelineDialogComponent = /** @class */ (function () {
     // Constructs a new Date based on user input.
     CustomizableTimelineDialogComponent.prototype.getSelectedDate = function () {
         var dateTime = new Date(this.dateFormControl.value);
-        var time = this.timeFormControl.value.split(':');
+        // For date parsing to work in IE, we must remove all extraneous non-ASCII
+        // characters added, and manually change the time.
+        var time = this.timeFormControl.value.replace(/[^\x00-\x7F]/g, '').split(':');
         dateTime.setHours(Number(time[0]), Number(time[1]));
-        console.log(dateTime);
         return dateTime;
     };
     // Finds incomplete fields that are required and disables saving.
