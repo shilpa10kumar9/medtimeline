@@ -9449,7 +9449,7 @@ var TimelineControllerComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"timelineToolbarMain\" fxLayout=\"row\">\n  <div *ngIf=\"showMockDataMessage\">This is synthesized data used for demo purposes only.</div>\n  <button mat-icon-button matTooltip=\"Launch Tutorial\">\n    <mat-icon class=\"toolbarButton\" (click)=\"openHelpDialog()\">help_outline</mat-icon>\n  </button>\n  <button mat-icon-button matTooltip=\"Save a static image of this page to a PowerChart clinical note\">\n    <mat-icon class=\"toolbarButton\" (click)=\"snapshot()\">\n      save\n    </mat-icon>\n  </button>\n</div>"
+module.exports = "<div class=\"timelineToolbarMain\" fxLayout=\"row\">\n  <div *ngIf=\"showMockDataMessage\">This is synthesized data used for demo purposes only.</div>\n  <button mat-icon-button matTooltip=\"Launch Tutorial\" (click)=\"openHelpDialog()\">\n    <mat-icon class=\"toolbarButton\">help_outline</mat-icon>\n  </button>\n  <button mat-icon-button matTooltip=\"Save a static image of this page to a PowerChart clinical note\"\n    (click)=\"snapshot()\">\n    <mat-icon class=\"toolbarButton\">\n      save\n    </mat-icon>\n  </button>\n</div>"
 
 /***/ }),
 
